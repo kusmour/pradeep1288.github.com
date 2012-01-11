@@ -4,6 +4,8 @@ permalink: /:categories/:year/:month/:day/:title
 auto: true
 pygments: true
 var:
+  about_path: /about
+  blog_path: /blog
   archive_path: /archive.html
   categories_path : /categories.html
   tags_path : /tags.html
@@ -12,7 +14,7 @@ production_url : http://username.github.com # or your custom domain name
 title : My Blog =)
 
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
+  name : Pradeep Nayak
+  email : pradeep1288@gmail.com
+  github : pradeep1288
+  twitter : prdpnayak
