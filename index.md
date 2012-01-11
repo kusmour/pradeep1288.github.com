@@ -1,45 +1,11 @@
 ---
 layout: page
-title: Hello from Jekyll-Bootstrap-Core
-header: This is Jekyll-Bootstrap
+title: Hello I am Pradeep Nayak
+header: This is Pradeep's Webpage
 ---
+Pradeep is yet another smart computer science engineer.He is very active on twitter as [@prdpnayak](http://twitter.com/prdpnayak) and also on [facebook](http://facebook.com/pradeepnayak). He is a Mac and Linux fan. He is also a hobby photographer and clicks cool pictures with his Cannon 500D.
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/jekyll-quick-start.html)
+If you are interested in knowing him, want any cool things done then shoot him a mail at pradeep1288@gmail.com
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllboostrap.com)
-
-## Update Author Attributes
-
-In `_config.yml` remember to specify your own data:
-    
-    title : My Blog =)
-    
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
-
-The theme should reference these variables whenever needed.
-    
-## Sample Posts
-
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
-
-    $ rm -rf _posts/core-samples
-
-Here's a sample "posts list".
-
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
-
-## To-Do
-
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap-core)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
 
 
