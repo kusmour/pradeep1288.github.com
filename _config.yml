@@ -11,7 +11,7 @@ var:
   tags_path : /tags.html
 
 production_url : http://pradeepnayak.in # or your custom domain name
-title : My Blog =)
+title : Pradeep Nayak
 
 author :
   name : Pradeep Nayak
