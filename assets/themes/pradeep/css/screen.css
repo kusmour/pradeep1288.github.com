@@ -215,14 +215,15 @@ ul.compact li a {
 }
 
 #header ul {
-	position: absolute;
+	display: block;
+        position: absolute;
 	top: 0;
 	right: 0;
 	font-size: 100%;
 	line-height: 1.6em;
 	display: block;
 	margin: 0;
-	width: 50%;
+	width: 53%;
 	text-align: right;
 }
 #header ul li { display: inline; }
