@@ -6,15 +6,15 @@ jekyll_dir    = "."
 posts_dir      = "_posts"
 new_post_ext   = "md"
 
-
 # usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
 desc "Begin a new post in #{jekyll_dir}/#{posts_dir}"
 task :new_post, :title do |t, args|
-  raise "### You haven't set anything up yet. First run `rake install` to set up an Octopress theme." unless File.directory?(jekyll_dir)
+  raise "### Cannot locate the #{posts_dir}." unless File.directory?(posts_dir)
   mkdir_p "#{jekyll_dir}/#{posts_dir}"
   args.with_defaults(:title => 'new-post')
-  title = args.title.gsub(/ /,'-')
-  filename = "#{jekyll_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title}.#{new_post_ext}"
+  slug = args.title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
+  title = args.title.gsub(/-/,' ')
+  filename = "#{jekyll_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{slug}.#{new_post_ext}"
   if File.exist?(filename)
     abort("rake aborted!") if ask("#{filename} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
   end
@@ -22,7 +22,7 @@ task :new_post, :title do |t, args|
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: post"
-    post.puts "title: #{title.gsub(/-/,' ')}"
+    post.puts "title: \"#{title}\""
     post.puts "comments: true"
     post.puts "category: "
     post.puts "tags: []"
@@ -70,3 +70,7 @@ task :switch_theme, :theme do |t, args|
   end
 end # task :switch_theme
 
+desc "Launch preview environment"
+task :preview do
+  system "jekyll --auto --server"
+end
