@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Welcome!
+title: Welcome
 header: This is Pradeep's Webpage
 ---
 <img class="inset right" title="Pradeep Nayak" src="/images/me.jpg" alt="Pradeeps picture" width="100px">
