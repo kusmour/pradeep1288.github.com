@@ -34,3 +34,6 @@ I am using [Disqus](http://disqus.com) for mananging comments on my [blog](/blog
 
 ## Setting up the tweet button for your blog post
 You may want users to share your blog post via twitter when they read your blog post. Twitter already provides this and you can create your button [here](https://twitter.com/about/resources/buttons#tweet "target=_blank"). After customizing your button you will be getting a custom html+js code, and all you need to do is insert that code in the appropriate templates where you want this tweet button. 
+
+## Source code
+You may reuse the source code of this site and its available on github. You can clone this [repository](https://github.com/pradeep1288/pradeep1288.github.com) 
