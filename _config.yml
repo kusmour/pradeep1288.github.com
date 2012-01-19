@@ -10,6 +10,8 @@ var:
   categories_path : /categories.html
   tags_path : /tags.html
 
+enable_tweet_button: true  
+
 production_url : http://pradeepnayak.in # or your custom domain name
 title : Pradeep Nayak
 
