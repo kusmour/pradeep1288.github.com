@@ -6,6 +6,7 @@ pygments: true
 var:
   about_path: /about
   blog_path: /blog
+  photos_path:/photos
   archive_path: /archive.html
   categories_path : /categories.html
   tags_path : /tags.html
