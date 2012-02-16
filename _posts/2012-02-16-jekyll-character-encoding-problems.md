@@ -7,8 +7,7 @@ tags: [jekyll, ruby]
 ---
 I use jekyll as my primary blogging platform. I wanted to write a post today and all of a sudden jekyll stopped working 
 and did not generate the `_site` content anymore. I then deleted the `_site` content and tried regenerating my site using 
-`jekyll --server`. It blindly said it re-generated my site however it did not. When I tried accessing my http://localhost/
-400 it gave me a forbidden error, no access permission to /. It was because my `_site` directory was empty. 
+`jekyll --server`. It blindly said it re-generated my site however it did not. When I tried accessing my http://localhost/4000 it gave me a forbidden error, no access permission to /. It was because my `_site` directory was empty. 
 
 I then ran `jekyll --no-auto --server` which actually printed the error on why it was failing to generate the site
 
