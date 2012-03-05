@@ -2,8 +2,8 @@
 layout: post
 title: "Root Kindle Fire - 6.2.2 on Mac OS X Lion"
 comments: true
-category: 
-tags: []
+category: Hacks 
+tags: [kindle, amazon]
 ---
 As you all know that I recently bought a Kindle Fire and you see my review [here](http://pradeepnayak.in/technology/2012/02/27/kindle-fire-my-first-touch-gadget). The Kindle Fire is locked to the Amazon App store by default and it is available only in the US. I initially thought that I would not root my Kindle and would install the apps by downloading apk's from third party sites, however this process became cumbersome. A few friends of mine on twitter, [@varunkumar](http://twitter.com/varunkumar) and [@vivekgolecha](http:twitter.com/vivekgolecha) suggested me to root the device and install Android Market. The only challenge was that I had a Macbook and its not a easy procees from a Mac. After a lot of research online, I found an awesome tool which can root your Kindle in no less than five minutes.
 
