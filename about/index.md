@@ -9,3 +9,6 @@ I did my computer science and engineering from [PES Institute of Technology](htt
 # About this site
 
 I would be writing about programming, hacking, travel, philosphy, ...... pretty much everything I feel like writing. You can read them in my [blog](/blog). 
+
+<img src = "/images/Twitter.png" width = "50px">
+<img src = "/images/Twitter.png" width = "50px">
