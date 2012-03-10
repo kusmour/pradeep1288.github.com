@@ -10,6 +10,7 @@ var:
   archive_path: /archive.html
   categories_path : /categories.html
   tags_path : /tags.html
+  search_path : /search.html
 
 enable_tweet_button: true  
 
