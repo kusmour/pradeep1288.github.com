@@ -1,0 +1,191 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  dir="ltr">
+<head>
+    <title>Implement Google AJAX Search API Example</title>
+    <meta name="description" content="Google provides an awesome method by which we can use their search for our own site:  the Google AJAX Search API.  Let me show you how to implement this awesome API within your own website!" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif" />
+<style type="text/css">
+
+    /*  all media  */
+    @media all
+    {
+        /* global */
+        *                           { margin:0; padding:0; } html { overflow-y:scroll; }
+        body                        { font-family:'lucida grande',tahoma,verdana,arial,sans-serif; font-size:62.5%; color:#222; }
+
+        /*  layout */
+        .center         { width:1000px; margin:0 auto; }
+            #page           {  }
+            #header     { height:40px; background:url(/wp-content/themes/walshhub/images/header.gif) 0 bottom repeat-x #fcfcfc; position:relative; }
+                a#header-logo   { position:absolute; top:7px; left:0; text-indent:-99999px; width:32px; height:25px; display:block; background:url(/wp-content/themes/walshhub/images/dwavatar.png) 0 0 no-repeat; }
+                #header-title   { font-weight:normal; font-family:"Droid Serif",Cambria,Georgia,Palatino,"Palatino Linotype",Myriad Pro,Serif; font-size:2em; }
+                    #header-title a { color:#000; text-decoration:none; position:absolute; top:10px; left:40px; }
+                    
+        #content    { background:#fff; padding:10px 0 10px 0; }
+            #content-left   { width:700px; margin:0 20px 0 0; float:left; }
+            #content-right  { width:280px; float:left; }
+                #content-right a    { float:left; padding-right:10px; display:block; width:125px; height:125px; }
+
+        #footer     { background:#eee; border-top:1px solid #ccc; padding:10px 0; }
+                    #footer1, #footer2, #footer3 { width:300px; float:left; margin:0 30px 0 0; }
+                    #footer3 { width:330px; margin-right:0; }
+        
+        /* tags */
+        abbr                        { border-bottom:1px dotted #ccc; cursor:help; }
+        blockquote                  { background:#eee; margin:0 20px; padding:10px 20px; }
+        code                        { font-family:'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace !important; }
+        h1                          { font-size:4.3em; margin:0 0 20px 0; }
+        h2                          { font-size:2.8em;  }
+            h1, h2, h3, h6          { font-weight:normal; font-family:"Droid Serif",Cambria,Georgia,Palatino,"Palatino Linotype","Myriad Pro",Serif; }
+        h3, h6                      { font-size:2em; }
+        h6                          { padding:0 0 5px 0; }
+        label,select,input[type='submit'],.point { cursor:pointer; }
+        li                          {  }
+        li,p                        { line-height:19px; margin-top:5px; }
+        ol, ul                      { padding:0 0 10px 35px; }
+        p                           { margin:5px 0 14px 0; font-size:1.2em; line-height:1.8em; }
+        textarea,input[type='text'], input[type='email'], input[type='password']    { border:1px solid #ccc; padding:5px; font-size:120%; font-family:'lucida grande',tahoma,verdana,arial,sans-serif; }
+        
+        /* stuff */
+        .clear                      { clear:both; }
+        .exhead                     { background:#e8f0f6; border-top:1px solid #fff; color:#000; padding:10px 10px; font-size:120%; }
+            .exhead a               { color:#6D84B4; }
+        .intro                      { background:#ffd987; font-style:italic; padding:5px 10px; margin-bottom:20px; }
+        .relative                   { position:relative; }
+        
+        /* links */
+        a                               { color:#3b5998; }
+        a:link, a:visited           { text-decoration:underline; }
+        a:hover, a:active           { text-decoration:none; }
+        a img                           { border:0; }
+        
+    }
+    
+    
+</style>
+<script type="text/javascript">
+window.onload = function() {
+    var paras = document.getElementById('content').getElementsByTagName('p');
+    if(paras.length) {
+        paras[0].className = paras[0].className + ' intro';
+    }
+};
+</script>   <style type="text/css">
+        #search-results     { visibility:hidden; }
+        #search-results-pointer { width:0px; height:0px; border-left:20px solid transparent; border-right:20px solid transparent; border-bottom:20px solid #eee; margin-left:80%; }
+                        #search-results-content { position:relative; padding:20px; background:#fff; border:3px solid #eee; width:380px; min-height:200px; -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5) }
+    </style>
+    <script type="text/javascript" src="mootools-1.2.4.js"></script>
+    <script type="text/javascript">
+    window.addEvent('domready',function() {
+        /* search */
+        var searchBox = $('search-box'), searchLoaded = false, searchFn = function() {
+            if(!searchLoaded) {
+                searchLoaded = true;
+
+                //build elements!
+                var container = new Element('div',{ id: 'search-results', position: 'relative' }).inject($('search-area-custom'),'after');
+                var wrapper = new Element('div',{
+                    styles: {
+                        position: 'relative'
+                    }
+                }).inject(container);
+                new Element('div',{ id: 'search-results-pointer' }).inject(wrapper);
+                var contentContainer = new Element('div',{ id: 'search-results-content' }).inject(wrapper);
+                var closer = new Element('a', { 
+                    href: 'javascript:;',
+                    text: 'Close',
+                    styles: {
+                        position: 'absolute',
+                        bottom: 35,
+                        right: 20
+                    },
+                    events: {
+                        click: function() {
+                            container.fade(0);
+                        }
+                    }
+                }).inject(wrapper);
+
+                //google ineraction
+                var search = new google.search.WebSearch(), 
+                    control = new google.search.SearchControl(),
+                    options = new google.search.DrawOptions();
+
+                options.setDrawMode(google.search.SearchControl.DRAW_MODE_TABBED);
+                options.setInput(searchBox);
+
+                search.setUserDefinedClassSuffix('siteSearch');
+                search.setSiteRestriction('pradeepnayak.in');
+                search.setLinkTarget(google.search.Search.LINK_TARGET_SELF);
+
+                control.addSearcher(search);
+                control.draw(contentContainer,options);
+                control.setNoResultsString('No results were found.');
+
+
+                //add listener
+                searchBox.addEvents({
+                    keyup: function(e) {
+                        if(searchBox.value && searchBox.value != searchBox.get('placeholder')) {
+                            container.fade(0.9);
+                            control.execute(searchBox.value);
+                        }
+                        else {
+                            container.fade(0);
+                        }
+                    }
+                });
+                searchBox.removeEvent('focus',searchFn);
+            }
+        };
+        searchBox.addEvent('focus',searchFn);
+    })
+    </script>
+</head>
+<body>
+
+        <!-- HEADER -->
+        <div id="header"><div class="center relative">
+            <a href="/" id="header-logo">David Walsh Blog</a>
+            <div id="header-title"><a href="/">David Walsh Blog</a></div>
+        </div></div>
+
+
+<div class="exhead"><div class="center">
+    <strong>Example Page for:</strong> <a href="http://davidwalsh.name/google-ajax-search">Implement Google AJAX Search API</a>.
+    <a href="/demos" style="color:green;">Click here</a> to view more demos!
+</div></div>
+<div id="content"><div class="center">
+    
+    <div id="content-left">
+        <h1 style="margin-top:20px;">Implement Google AJAX Search API Example</h1>  
+    <p>Start typing in the search box below to see Google AJAX Search in action.</p>
+    
+    <form action="http://www.google.com/search" id="top_search_form" method="get">
+        <input type="search" id="search-box" name="q" results="5" placeholder="Search..." autocomplete="on" class="placeholder" style="width:400px;" />
+        <input type="hidden" name="sitesearch" value="pradeepnayak.in" /><input id="search-submit" type="submit" value="Search" />
+        <div id="search-area-custom" style="position:relative;"></div>
+    </form>
+
+<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAMt9YZQaG_wbfmb2826e_wBTPUDO5TVHJS-HZdrhJpqnB5yZcfRQFObTd1-bPphEIY11228Z78VhA6A"></script>
+<script type="text/javascript">
+    google.load('search','1');
+</script>
+        
+</div>
+<div id="content-right">
+            <div id="bsap_1236348" class="bsarocks bsap_db3b221ddd8cbba67739ae3837520ffe"></div>
+    </div>
+
+
+<div class="clear"></div>
+</div></div>
+
+<div class="exhead">
+    <strong>&lt;&lt; Back to:</strong> <a href="http://davidwalsh.name/google-ajax-search">Implement Google AJAX Search API</a>
+</div>
+
+</body>
+</html>
