@@ -2,7 +2,7 @@
 layout: post
 title: "Install free Apps from the Amazon app store outside US"
 comments: true
-category: technology, Hacks
+category: Hacks
 tags: [kindle, amazon]
 ---
 You must be all knowing that if you are a Kindle Fire user outside of US, you cannot install apps from Amazon App Store, not even the free apps. I recently [rooted](http://pradeepnayak.in/Hacks/2012/03/03/Root-Kindle-Fire-mac/) my Kindle Fire and was able to install most of the apps. However there were few Apps on the Android market which were free but it complained that it was not compaitble for my Kindle Fire. However these apps were available on the Amazon app store and I wanted to install it from there.
