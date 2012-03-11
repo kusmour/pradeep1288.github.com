@@ -2,7 +2,7 @@
 layout: post
 title: Why use '#!' in scripts
 comments: true
-category: tech
+category: technology
 tags: [linux, scripting]
 ---
 

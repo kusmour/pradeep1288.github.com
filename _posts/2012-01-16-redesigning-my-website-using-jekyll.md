@@ -2,7 +2,7 @@
 layout: post
 title: "Redesigning my website using Jekyll"
 comments: true
-category: tech
+category: technology
 tags: [tutorials]
 ---
 
