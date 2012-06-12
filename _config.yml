@@ -11,6 +11,7 @@ var:
   categories_path : /categories.html
   tags_path : /tags.html
   search_path : /search.html
+  bucket_list: /bucket.html
 
 enable_tweet_button: true  
 
