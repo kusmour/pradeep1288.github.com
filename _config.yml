@@ -14,7 +14,7 @@ var:
   bucket_list: /bucket.html
 
 enable_tweet_button: true  
-
+searchindex: yes
 production_url : http://pradeepnayak.in # or your custom domain name
 title : Pradeep Nayak
 
