@@ -10,13 +10,13 @@ I have a lot in mind, however these are few things which I would like to accompl
 * Visit New Zeland
 * Do Skeing 
 * Watch a formula 1 race
-* Watch a EPL match
+* Watch an EPL match
 * Watch an international football match
 * Mount Everest base camp
-* Scooba Diving
+* Scuba Diving
 * Ladakh Bike Trip
 * Masai Mara National Reserve Safari
-* New Years Eve in Times Square
+* New Year's Eve in Times Square
 * Drive a sports car
 * Drive a sports bike
 * Travel in a cruise ship
