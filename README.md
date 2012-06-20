@@ -4,7 +4,7 @@ This is my website. Please feel free to reuse the code. This is based on jekyll-
 
 ## Version
 
-0.0.1 
+1.0.0 
  
 ## Development
 
