@@ -26,8 +26,4 @@ You are all set now. Compile your site using Jekyll and it will generate your se
 
 Have a look at my site's source on [github](https://github.com/pradeep1288/pradeep1288.github.com) if you are confused.
 
-Hope you find this useful!
-
-
-
- 
+Hope you find this useful! 
