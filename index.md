@@ -11,6 +11,6 @@ If you are interested in knowing him, want any cool things done then shoot him a
 <a href="http://twitter.com/prdpnayak" target="_blank"><img src = "/images/Twitter.png" width = "30px"></a>
 <a href="http://facebook.com/pradeepnayak" target="_blank"><img src = "/images/Facebook.png" width = "30px" hspace="5"></a>
 <a href="http://feeds.feedburner.com/pradeepnayak" target="_blank"><img src = "/images/RSS.png" width = "30px" space="5"></a>
-<a href="mailto:pradeep1288@gmail.com" target="_blank" ><img src = "/images/Contact.png" width = "30px" hspace="5"></a>
+<a href="mailto:pradeep@pradeepnayak.in" target="_blank" ><img src = "/images/Contact.png" width = "30px" hspace="5"></a>
 
 
