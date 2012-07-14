@@ -8,8 +8,7 @@ Pradeep is yet another smart computer science engineer. He is very active on twi
 
 If you are interested in knowing him, want any cool things done then shoot him a mail at <pradeep1288@gmail.com>
    
-<a class="social" href="http://twitter.com/prdpnayak" target="_blank">t</a>&nbsp;
-<a class ="social" href="http://facebook.com/pradeepnayak" target="_blank">F</a>&nbsp;
-<a class="social" href="http://feeds.feedburner.com/pradeepnayak" target="_blank">r</a>&nbsp;
+<a class="social" href="http://twitter.com/prdpnayak" target="_blank">t</a>
+<a class ="social" href="http://facebook.com/pradeepnayak" target="_blank">F</a>
+<a class="social" href="http://feeds.feedburner.com/pradeepnayak" target="_blank">r</a>
 <a class="social" href="mailto:pradeep@pradeepnayak.in" target="_blank" >4</a>
-
