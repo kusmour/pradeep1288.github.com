@@ -260,7 +260,7 @@ ul.compact li a {
 #header h1 {
     font-family: ArvoRegular , georgia, "times new roman", serif;
     margin-bottom: 0;
-    line-height: 0.9em;
+    line-height: 1em;
     display: block;
     font-weight: normal;
 }
@@ -271,7 +271,7 @@ ul.compact li a {
     top: 0;
     right: 0;
     font-size: 100%;
-    line-height: 1.6em;
+    line-height: 1.5em;
     display: block;
     margin: 0;
     width: 73%;
