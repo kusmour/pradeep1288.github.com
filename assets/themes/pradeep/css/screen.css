@@ -97,7 +97,7 @@ sup { line-height: 1ex; }
 }
 
 #page, #disqus_thread {
-    background: white;
+    background: whitesmoke;
 /*  background-image: url(grid.png); */
     padding: 3em 3em 1.5em 3em;
     border: 1px solid #ccc;
@@ -174,7 +174,7 @@ table.neat {
 }
 table.neat tr { text-align: center; }
 table.neat th { font-weight: normal; background-color: #eeeeee; }
-table.neat td { background-color: white; }
+table.neat td { background-color: whitesmoke; }
 table.neat th.title { border-bottom: 1px solid gray; border-top: 1px solid gray; vertical-align: bottom; background-color: lightgrey; }
 caption { 
     color: #333;
