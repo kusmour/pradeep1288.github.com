@@ -24,3 +24,6 @@ author :
   github : pradeep1288
   disqus_shortname: pradeepnayak
   twitter : prdpnayak
+
+leftCurleys: "{{"
+rightCurleys: "}}"

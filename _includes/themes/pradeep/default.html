@@ -38,7 +38,11 @@
       <li><a  href="/blog">Blog</a></li>
       <li><a  href="/categories.html">Categories</a></li>
       <li><a  href="/archive.html">Archive</a></li>
-      <li><a  href="/search.html">Search</a></li>
+      <li>
+          <form action="/search.html" method="get">
+          <input type="search" placeholder="search..." id="q" name="q" onkeypress="if(event.keyCode==13) {this.submit();}" class="ng-pristine ng-valid">
+        </form>
+      </li>
     </ul>
   </div>
   {{ content }}
