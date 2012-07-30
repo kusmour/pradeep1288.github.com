@@ -3,7 +3,7 @@ layout: post
 title: "Down Memory Lane"
 comments: true
 category: personal
-tags: [memories childhood]
+tags: [memories, childhood]
 ---
 
 I was recently travelling to Shimoga from Mangalore. Shimoga is my mom's paternal place. I always used to visit this place while I was a kid every summer vacation. I still remember the games I used to play ther while I was a kid. But this time I was visiting to say "Good Bye" as I am leaving to US in a week's time. 
