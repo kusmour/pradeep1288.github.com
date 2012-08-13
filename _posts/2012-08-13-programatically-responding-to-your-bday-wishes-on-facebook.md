@@ -21,22 +21,23 @@ Replace YOUR_FACEBOOK_API_TOKEN by this api token in the script below
 
 ##Installing facepy:
 
-1. direct install
-<code>
-$pip install facepy
-</code>
+* direct install
 
-2. From github
-<code>
-$git clone https://github.com/jgorset/facepy.git
-</code><code>
-$cd facepy</code><code>
-$python setup.py install</code>
+    <code>
+        pip install facepy
+    </code>
 
---If you don't have root access 
-<code>
-$python setup.py install --user
-</code>
+* From github
+
+    <code>
+    git clone https://github.com/jgorset/facepy.git<br/>
+    cd facepy<br/>
+    python setup.py install<br/>
+    </code>
+
+* If you don't have root access 
+
+    <code>python setup.py install --user</code>
 
 And this is the code..
 
