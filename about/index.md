@@ -10,7 +10,9 @@ I did my computer science and engineering from [PES Institute of Technology](htt
 
 I would be writing about programming, hacking, travel, philosphy, ...... pretty much everything I feel like writing. You can read them in my [blog](/blog). 
 
-<a class="social" href="http://twitter.com/prdpnayak" target="_blank">t</a>
-<a class ="social" href="http://facebook.com/pradeepnayak" target="_blank">F</a>
-<a class="social" href="http://feeds.feedburner.com/pradeepnayak" target="_blank">r</a>
-<a class="social" href="mailto:pradeep@pradeepnayak.in" target="_blank" >4</a>
+<ul class="ca-menu">
+<li><a class="social" href="http://twitter.com/prdpnayak" target="_blank">t</a></li>
+<li><a class ="social" href="http://facebook.com/pradeepnayak" target="_blank">F</a></li>
+<li><a class="social" href="http://feeds.feedburner.com/pradeepnayak" target="_blank">r</a></li>
+<li><a class="social" href="mailto:pradeep@pradeepnayak.in" target="_blank" >4</a></li>
+</ul>
