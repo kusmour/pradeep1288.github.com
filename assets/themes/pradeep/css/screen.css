@@ -71,7 +71,7 @@ body {
 img { -ms-interpolation-mode:bicubic; }
 
 /* IE6 ignores this and uses default size of 16pt */
-html>body { font-size:20px; }
+html>body { font-size:18px; }
 p { margin: 0 0 1.5em 0; text-align: justify; }
 
 a { text-decoration: none; color: #339; }
