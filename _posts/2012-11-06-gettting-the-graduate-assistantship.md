@@ -3,7 +3,7 @@ layout: post
 title: "Getting the Graduate Assistantship"
 comments: true
 category: personal
-tags: [usc]
+tags: [USC]
 ---
 Well, as the post title says I am now a Graduate Student Assistant at the University of Southern California :-) I no longer have to pay any tuition towards my masters and I would also be getting a generous stipend on a monthly basis. This meant free education!! 
 
