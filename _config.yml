@@ -13,6 +13,7 @@ var:
   search_path : /search.html
   bucket_list: /bucket.html
 
+markdown: redcarpet
 enable_tweet_button: true  
 searchindex: yes
 production_url : http://pradeepnayak.in # or your custom domain name
