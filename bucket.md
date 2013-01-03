@@ -16,7 +16,7 @@ I have a lot in mind, however these are few things which I would like to accompl
 * Scuba Diving
 * Ladakh Bike Trip
 * Masai Mara National Reserve Safari
-* New Year's Eve in Times Square
+* <del>New Year's Eve in Times Square</del>
 * Drive a sports car
 * Drive a sports bike
 * Travel in a cruise ship
