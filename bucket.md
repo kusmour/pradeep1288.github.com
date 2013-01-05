@@ -8,7 +8,7 @@ I have a lot in mind, however these are few things which I would like to accompl
 * Skydiving
 * Learn to fly a plane
 * Visit New Zeland
-* Do Skeing 
+* Do Skiing 
 * Watch a formula 1 race
 * Watch an EPL match
 * Watch an international football match
