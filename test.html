@@ -44,7 +44,7 @@ HowMany.prototype.onHistory = function(history) {
   var mall_counts = 0;
   for (var i = 0; i < history.length; i++) {
     var entry = history[i]['venue'];
-    if (entry.menu == undefined)
+    if (entry.menu == undefined && entry.categories[0].name != undefined)
     {
       //deal with non food places here
       if (entry.categories[0].name == 'Airport')
