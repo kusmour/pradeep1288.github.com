@@ -20,11 +20,14 @@ Foursquare.prototype.doAuthRedirect = function(authUrl, apiKey) {
   var url = authUrl + 'oauth2/authenticate?response_type=token&client_id=' + apiKey +
       '&redirect_uri=' + encodeURIComponent(redirect) +
       '&state=' + encodeURIComponent($.bbq.getState('req') || 'users/self');
-  //window.location.href = 'https://api.foursquare.com/v2/users/self/venuehistory?oauth_token=UKSTRDTKV0IZ4CXIXMDBMRV0LRCMZ5SY0SEHKVNNNVRWIJN5&callback=?';
+  //no need to authorize as venuehistory does not need auth
+  //window.location.href = url;
 };
 
 Foursquare.prototype.makeRequest = function(query, callback) {
   var query = query + ((query.indexOf('?') > -1) ? '&' : '?') + 'oauth_token=' + this.token + '&callback=?';
+  //$.getJSON(this.apiUrl + 'v2/' + query, {}, callback);
+  //hack added as venueHistory does not need authentication
   $.getJSON('https://api.foursquare.com/v2/users/self/venuehistory?oauth_token=UKSTRDTKV0IZ4CXIXMDBMRV0LRCMZ5SY0SEHKVNNNVRWIJN5&callback=?',{}, callback);
 };
 
