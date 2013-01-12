@@ -8,7 +8,7 @@ function HowMany(apiKey, authUrl, apiUrl) {
  * Fetch users's history, and then render in callbkac.
  */
 HowMany.prototype.run = function() {
-  Foursquare.prototype.venueHistory(bind(HowMany.prototype.onHistory, this));
+  Foursquare.prototype.venueHistory(HowMany.prototype.onHistory);
 }
 
 /**
