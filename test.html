@@ -1,0 +1,75 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript" id="jquery"></script>
+<script src="https://ss0.4sqi.net/scripts/third_party/jquery.ba-bbq-eddd4adf74d0c1310a401475178c57df.js" type="text/javascript"></script>
+<script src="https://ss1.4sqi.net/scripts/apisamples-35608dc9c26343e74f5d99fc20bae6c5.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+
+/**
+ * Sample application that uses the foursquare API to show how many Starbucks
+ * locations a user has been to.
+ */
+function HowMany(apiKey, authUrl, apiUrl) {
+  this.foursquare = new Foursquare(apiKey, authUrl, apiUrl);
+}
+
+/**
+ * Fetch users's history, and then render in callbkac.
+ */
+HowMany.prototype.run = function() {
+  this.foursquare.venueHistory(bind(this.onHistory, this));
+}
+
+/**
+ * Given response from venuehistory, build a map from venue ID to history item.
+ * @private
+ */
+HowMany.prototype.onHistory = function(history) {
+  var html = [];
+  var count = 0;
+  for (var i = 0; i < history.length; i++) {
+    var entry = history[i]['venue'];
+    if (entry.name.indexOf('Starbucks') > -1) {
+      count++;
+      html.push(entry.location.address, ', ', entry.location.city, '<br/>');
+    }
+  }
+  $('#content').html(html.join(''));
+  $('#count').html(count + '');
+}
+//]]>
+
+$(function() {
+
+  new HowMany('NDP5V3HX44XRYA51JQWLMV500PXCCB4ZJ23DZJPNYDYMP5TU', 'https://foursquare.com/', 'http://pradeepnayak.in').run();
+
+})
+</script>
+<link href="https://ss1.4sqi.net/styles/third_party/apisamples-0392cfe95c9fd32087ab6d80fcb80175.css" type="text/css" rel="stylesheet" />
+
+    
+</head>
+<body>
+<h1>How many Starbucks have I been to?</h1>
+<br /><br />
+<div style="width: 600px; height: 600px; position: absolute;" id="count">
+</div>
+<div style="margin-left: 200px" id="content">
+</div>
+<div class="note">This is a <a href="../samples">sample foursquare API application</a>. Please view the source and remix it in your own applications!</div>
+<script src="/ajax_request/liftAjax.js" type="text/javascript"></script>
+
+    
+<script type="text/javascript">
+// <![CDATA[
+
+var lift_page = "F644955191959DIFHNM";
+// ]]>
+</script></body>
+</html>  
+  
