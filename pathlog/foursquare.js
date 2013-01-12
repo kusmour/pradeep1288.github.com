@@ -25,7 +25,7 @@ Foursquare.prototype.doAuthRedirect = function(authUrl, apiKey) {
 
 Foursquare.prototype.makeRequest = function(query, callback) {
   var query = query + ((query.indexOf('?') > -1) ? '&' : '?') + 'oauth_token=' + this.token + '&callback=?';
-  $.getJSON(this.apiUrl + 'v2/' + query, {}, callback);
+  $.getJSON('https://api.foursquare.com/v2/users/self/venuehistory?oauth_token=UKSTRDTKV0IZ4CXIXMDBMRV0LRCMZ5SY0SEHKVNNNVRWIJN5&v=20130112', callback);
 };
 
 Foursquare.prototype.trendingVenues = function(lat, lng, callback) {
