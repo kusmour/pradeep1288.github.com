@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -78,19 +79,19 @@ HowMany.prototype.onHistory = function(history) {
         coffee_html.push(entry.location.address, ', ', entry.location.city, '<br/>');
        }    
     }
-    $('#coffee_html').html(html.join(''));
+    $('#coffee_html').html(coffee_html.join(''));
     $('#coffee_counts').html(count + '');
 
-    $('#mall_html').html(html.join(''));
+    $('#mall_html').html(mall_html.join(''));
     $('#mall_counts').html(count + '');
 
-    $('#airports_html').html(html.join(''));
+    $('#airports_html').html(airports_html.join(''));
     $('#airports_counts').html(count + '');
 
-    $('#resedential_html').html(html.join(''));
-    $('#resedential_counts').html(count + '');
+    $('#resident_html').html(resident_html.join(''));
+    $('#resident_counts').html(count + '');
 
-    $('#multiplex_html').html(html.join(''));
+    $('#multiplex_html').html(multiplex_html.join(''));
     $('#multiplex_counts').html(count + '');
   }
 //]]>
@@ -134,11 +135,11 @@ $(function() {
 <div style="margin-left: 200px" id="mall_html">
 </div>
 
-<h1>How many resedential buildings have I been to?</h1>
+<h1>How many resident buildings have I been to?</h1>
 <br /><br />
-<div style="width: 600px; height: 600px; position: absolute;" id="resedential_count">
+<div style="width: 600px; height: 600px; position: absolute;" id="resident_count">
 </div>
-<div style="margin-left: 200px" id="resedential_html">
+<div style="margin-left: 200px" id="resident_html">
 </div>
 </body>
 </html>  
