@@ -30,20 +30,70 @@ HowMany.prototype.run = function() {
  * @private
  */
 HowMany.prototype.onHistory = function(history) {
-  var html = [];
-  var count = 0;
+  var restaurants_html = [];
+  var airports_html = [];
+  var coffee_html = [];
+  var resident_html = [];
+  var multiplex_html = [];
+  var mall_html =[];
+  var restaurants_counts = 0;
+  var airports_counts = 0;
+  var coffee_counts = 0;
+  var resident_counts = 0;
+  var multiplex_counts = 0;
+  var mall_counts = 0;
   for (var i = 0; i < history.length; i++) {
     var entry = history[i]['venue'];
-    var cat = entry.categories['name'];
-    if (entry.name.indexOf('Starbucks') > -1) {
-      count++;
-      html.push(entry.location.address, ', ', entry.location.city, '<br/>');
+    if (entry.menu == 'undefined')
+    {
+      //deal with non food places here
+      if (entry.categories[0].name == 'Airport')
+      {
+        airports_counts++;
+        airports_html.push(entry.name + '<br/>');
+      }
+      else if (entry.categories[0].name == 'Mall')
+      {
+        mall_counts++
+        mall_html.push(entry.name, ', ', entry.location.address, ', ', entry.location.city, '<br/>');
+      }
+      else if (entry.categories[0].name == 'Multiplex')
+      {
+        multiplex_counts++;
+        multiplex_html.push(entry.name, ', ', entry.location.address, ', ', entry.location.city, '<br/>');
+      }
+      else if (entry.categories[0].name.indexOf('Residential') > -1)
+      {
+        resident_counts++;
+        resident_html.push(entry.name, ', ', entry.location.address, ', ', entry.location.city, '<br/>');
+      }
+      else 
+      {
+        //Ignore others for now
+      }
     }
+    else {
+      //deal with food places here  
+       if (entry.name.indexOf('Starbucks') > -1) {
+        coffee_counts++;
+        coffee_html.push(entry.location.address, ', ', entry.location.city, '<br/>');
+       }    
+    }
+    $('#coffee_html').html(html.join(''));
+    $('#coffee_counts').html(count + '');
+
+    $('#mall_html').html(html.join(''));
+    $('#mall_counts').html(count + '');
+
+    $('#airports_html').html(html.join(''));
+    $('#airports_counts').html(count + '');
+
+    $('#resedential_html').html(html.join(''));
+    $('#resedential_counts').html(count + '');
+
+    $('#multiplex_html').html(html.join(''));
+    $('#multiplex_counts').html(count + '');
   }
-  html.push(cat, '<br/>');
-  $('#content').html(html.join(''));
-  $('#count').html(count + '');
-}
 //]]>
 
 $(function() {
@@ -59,19 +109,38 @@ $(function() {
 <body>
 <h1>How many Starbucks have I been to?</h1>
 <br /><br />
-<div style="width: 600px; height: 600px; position: absolute;" id="count">
+<div style="width: 600px; height: 600px; position: absolute;" id="coffee_counts">
 </div>
-<div style="margin-left: 200px" id="content">
+<div style="margin-left: 200px" id="coffee_html">
 </div>
-<div class="note">This is a <a href="../samples">sample foursquare API application</a>. Please view the source and remix it in your own applications!</div>
-<script src="/ajax_request/liftAjax.js" type="text/javascript"></script>
 
-    
-<script type="text/javascript">
-// <![CDATA[
+<h1>How many Airports have I been to?</h1>
+<br /><br />
+<div style="width: 600px; height: 600px; position: absolute;" id="airports_count">
+</div>
+<div style="margin-left: 200px" id="airports_html">
+</div>
 
-var lift_page = "F644955191959DIFHNM";
-// ]]>
-</script></body>
+<h1>How many Multiplexes have I been to ?</h1>
+<br /><br />
+<div style="width: 600px; height: 600px; position: absolute;" id="multiplex_count">
+</div>
+<div style="margin-left: 200px" id="multiplex_html">
+</div>
+
+<h1>How many Malls have I been to ?</h1>
+<br /><br />
+<div style="width: 600px; height: 600px; position: absolute;" id="mall_count">
+</div>
+<div style="margin-left: 200px" id="mall_html">
+</div>
+
+<h1>How many resedential buildings have I been to?</h1>
+<br /><br />
+<div style="width: 600px; height: 600px; position: absolute;" id="resedential_count">
+</div>
+<div style="margin-left: 200px" id="resedential_html">
+</div>
+</body>
 </html>  
   
