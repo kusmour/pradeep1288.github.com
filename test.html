@@ -68,6 +68,10 @@ HowMany.prototype.onHistory = function(history) {
         resident_counts++;
         resident_html.push(entry.name, ', ', entry.location.address, ', ', entry.location.city, '<br/>');
       }
+      else if (entry.categories[0].name.indexOf('Coffee') > -1) {
+        coffee_counts++;
+        coffee_html.push(entry.location.address, ', ', entry.location.city, '<br/>');
+       }  
       else 
       {
         //Ignore others for now
