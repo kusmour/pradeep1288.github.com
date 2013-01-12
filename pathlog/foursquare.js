@@ -20,12 +20,12 @@ Foursquare.prototype.doAuthRedirect = function(authUrl, apiKey) {
   var url = authUrl + 'oauth2/authenticate?response_type=token&client_id=' + apiKey +
       '&redirect_uri=' + encodeURIComponent(redirect) +
       '&state=' + encodeURIComponent($.bbq.getState('req') || 'users/self');
-  //window.location.href = 'https://api.foursquare.com/v2/users/self/venuehistory?oauth_token=UKSTRDTKV0IZ4CXIXMDBMRV0LRCMZ5SY0SEHKVNNNVRWIJN5&v=20130112';
+  //window.location.href = 'https://api.foursquare.com/v2/users/self/venuehistory?oauth_token=UKSTRDTKV0IZ4CXIXMDBMRV0LRCMZ5SY0SEHKVNNNVRWIJN5&callback=?';
 };
 
 Foursquare.prototype.makeRequest = function(query, callback) {
   var query = query + ((query.indexOf('?') > -1) ? '&' : '?') + 'oauth_token=' + this.token + '&callback=?';
-  $.getJSON('https://api.foursquare.com/v2/users/self/venuehistory?oauth_token=UKSTRDTKV0IZ4CXIXMDBMRV0LRCMZ5SY0SEHKVNNNVRWIJN5&v=20130112', callback);
+  $.getJSON('https://api.foursquare.com/v2/users/self/venuehistory?oauth_token=UKSTRDTKV0IZ4CXIXMDBMRV0LRCMZ5SY0SEHKVNNNVRWIJN5&callback=?',{}, callback);
 };
 
 Foursquare.prototype.trendingVenues = function(lat, lng, callback) {
