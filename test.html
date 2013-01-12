@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -33,11 +34,13 @@ HowMany.prototype.onHistory = function(history) {
   var count = 0;
   for (var i = 0; i < history.length; i++) {
     var entry = history[i]['venue'];
+    var cat = entry.categories['name'];
     if (entry.name.indexOf('Starbucks') > -1) {
       count++;
       html.push(entry.location.address, ', ', entry.location.city, '<br/>');
     }
   }
+  html.push(cat, '<br/>');
   $('#content').html(html.join(''));
   $('#count').html(count + '');
 }
