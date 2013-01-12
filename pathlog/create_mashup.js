@@ -1,5 +1,5 @@
 function HowMany(apiKey, authUrl, apiUrl) {
-  this.foursquare = new Foursquare(apiKey, authUrl, apiUrl);
+  HowMany.prototype.run();
 }
 
 /**
