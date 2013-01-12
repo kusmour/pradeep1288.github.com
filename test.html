@@ -79,6 +79,8 @@ HowMany.prototype.onHistory = function(history) {
         coffee_html.push(entry.location.address, ', ', entry.location.city, '<br/>');
        }    
     }
+    
+  }
     $('#coffee_html').html(coffee_html.join(''));
     $('#coffee_counts').html(count + '');
 
@@ -93,7 +95,7 @@ HowMany.prototype.onHistory = function(history) {
 
     $('#multiplex_html').html(multiplex_html.join(''));
     $('#multiplex_counts').html(count + '');
-  }
+}
 //]]>
 
 $(function() {
