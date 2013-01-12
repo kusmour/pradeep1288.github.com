@@ -74,7 +74,7 @@ HowMany.prototype.onHistory = function(history) {
     }
     else {
       //deal with food places here  
-       if (entry.name.indexOf('Starbucks') > -1) {
+       if (entry.categories[0].name.indexOf('Starbucks') > -1) {
         coffee_counts++;
         coffee_html.push(entry.location.address, ', ', entry.location.city, '<br/>');
        }    
