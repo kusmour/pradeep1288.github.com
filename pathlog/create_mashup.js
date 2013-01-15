@@ -68,7 +68,7 @@ HowMany.prototype.onHistory = function(history) {
         coffee_counts++;
         coffee_html.push(entry.location.address, ', ', entry.location.city, '<br/>');
        }
-      else if (entry.categories[0].name.indexOf('Restaurant') > -1) {
+      else if (entry.categories[0].name.indexOf('Restaurant') > -1 || entry.categories[0].name.indexOf('Burrito')) {
         restaurants_counts++; 
         restaurants_html.push(entry.name, ', ', entry.location.address, ', ', entry.location.city, '<br/>');
       }     
