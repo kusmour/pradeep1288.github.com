@@ -78,5 +78,5 @@ HowMany.prototype.onHistory = function(history) {
     $('#coffee_counts').html(coffee_counts + '');
 }
 $(function() {
-  new HowMany('4VAMTWCX4CACSUXI4LDE0J31W3W3NV5GEOKUR42MWR2TY3W5', 'https://foursquare.com/', 'https://api.foursquare.com/').run();
+  new HowMany('NDP5V3HX44XRYA51JQWLMV500PXCCB4ZJ23DZJPNYDYMP5TU', 'https://foursquare.com/', 'https://api.foursquare.com/').run();
 });
