@@ -61,7 +61,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,p,blockquote,th,t
 /* @end */
 
 body {
-    font-family: Open Sans, georgia, "times new roman", serif;
+    font-family: adelle-1, Open Sans, georgia, "times new roman", serif;
     background-color: beige;
     background-position: center -18em;
     background-repeat: repeat-x; 
@@ -85,7 +85,7 @@ h1,h2,h3,h4 {
     font-size:1.5em; 
     font-weight: normal; 
     clear: left;    
-    font-family: Open Sans , 'lucida grande', sans-serif; 
+    font-family: adelle-1, Open Sans , 'lucida grande', sans-serif; 
 }
 h1 { margin-bottom: 1em; }
 h2 {
@@ -247,7 +247,7 @@ ul.compact li a {
     margin-bottom: 0;
 }
 #header h1 {
-    font-family: Open Sans , georgia, "times new roman", serif;
+    font-family: adelle-1, Open Sans , georgia, "times new roman", serif;
     margin-bottom: 0;
     line-height: 1em;
     display: block;
@@ -327,7 +327,7 @@ body#Kith #header a.kith
     padding-right: 3em;
 }
 .section h1 {
-    font-family: Open Sans, georgia, "times new roman", serif;
+    font-family: adelle-1, Open Sans, georgia, "times new roman", serif;
     font-size: 100%;
     line-height: 1.43em;
     position: absolute;
