@@ -21,5 +21,5 @@ I have a lot in mind, however these are few things which I would like to accompl
 * Drive a sports bike
 * Travel in a cruise ship
 * Learn to speak a foreign language
-* Roadtrip to Leh
+* Hot Air Baloon Ride
 * Set foot in all five oceans of the world
