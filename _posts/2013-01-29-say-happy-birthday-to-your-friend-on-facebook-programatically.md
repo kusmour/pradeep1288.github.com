@@ -26,10 +26,10 @@ Now run your application
 
  This is a very simple app and the code is self explanatory. 
 
- ##Future Enhancements
+ **Future Enhancements**
 
  * Support exceptions. You may not want to wish a specific friend :D
  * Wish people on their anniversaries and other life events and make the app more generic
 
- If you wish to contribute, please [fork](https://github.com/pradeep1288/fb_bday_wisher) away 
+ If you wish to contribute, please [fork](https://github.com/pradeep1288/fb_bday_wisher/fork) away 
 
