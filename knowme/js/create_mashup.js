@@ -1,3 +1,6 @@
+var coffee_json="{\"name\": \"coffee\",  \"range\": 25, \"comments\": { \"0\":[ \"Thats it?\", \"WTF?! Do you want the starbucks to shut down?\",\"Haven't you been taking a girl out for coffee?\", \"I'm glad you alteast know that a drink called coffee exists!\" ], \"1\": [ \"Woah! slow down dude!\",\"Spend money more wisely!\", \"I hope its just one girl you've been taking to the coffee shop\", \"Caffine rocks?\", \"You'll soon be arrested for high drug intake!\" ] }}";
+
+
 function HowMany(apiKey, authUrl, apiUrl) {
   this.foursquare = new Foursquare(apiKey, authUrl, apiUrl);
 }
@@ -22,7 +25,7 @@ function getCoffeeCount(response)
       var data = response[i]['venue'];
       if (data.categories.length !=0 )
       {
-        if (data.categories[0].indexOf('Coffee') > -1)
+        if (data.categories[0].name.indexOf('Coffee') > -1)
         {
           coffee_counts ++;
         }
@@ -35,7 +38,29 @@ function getCoffeeCount(response)
 */
 function getRandomCoffeeFunFact(coffee_count)
 {
-  //Izaaz's code here.
+    var myJson = $.parseJSON(coffee_json);
+    var range = myJson.range;
+    var commentType = Math.floor(intake/range);
+    //bounds check. If you get a high value, it defaults to the last set of comments
+    if(commentType > getLength(myJson.comments))
+        commentType = getLength(myJson.comments) - 1;
+    var possibleComments = myJson.comments[commentType];
+    var commentIndex = Math.floor(Math.random() * possibleComments.length);
+    return(possibleComments[commentIndex]);
+}
+
+/**
+* Takes in a dictionary object and gives back the number of elements in that dictionary. Used for bounds checking 
+* in the getRandomCoffeeFunFact method
+* @private
+*/
+function getLength(comments)
+{
+    var count = 0;
+    for (var i in comments) {
+        if (comments.hasOwnProperty(i)) count++;
+    }
+    return count;
 }
 
 /**
@@ -45,8 +70,8 @@ function getRandomCoffeeFunFact(coffee_count)
 HowMany.prototype.onHistory = function(history) {
   var coffee_html = [];
   var coffee_counts = getCoffeeCount(history);
-  $('#coffee_html').html(coffee_html.join(''));
-  $('#coffee_counts').html(coffee_counts + '');
+  var random_coffee_fact = getRandomCoffeeFunFact(coffee_counts);
+  $('#coffee_fact').html(random_coffee_fact + '');
 }
 
 $(function() {
