@@ -40,7 +40,7 @@ function getRandomCoffeeFunFact(coffee_count)
 {
     var myJson = $.parseJSON(coffee_json);
     var range = myJson.range;
-    var commentType = Math.floor(intake/range);
+    var commentType = Math.floor(coffee_count/range);
     //bounds check. If you get a high value, it defaults to the last set of comments
     if(commentType > getLength(myJson.comments))
         commentType = getLength(myJson.comments) - 1;
