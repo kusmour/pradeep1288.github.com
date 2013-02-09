@@ -27,7 +27,7 @@ function getCoffeeCount(response)
       {
         if (data.categories[0].name.indexOf('Coffee') > -1)
         {
-          coffee_counts ++;
+          coffee_count ++;
         }
       }
     }
