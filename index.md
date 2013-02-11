@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Welcome
 header: This is Pradeep's Website
 ---
