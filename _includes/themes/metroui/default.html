@@ -9,7 +9,14 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
    <!-- Mobile viewport optimized: h5bp.com/viewport -->
    <meta name="viewport" content="width=device-width">
-
+   <meta name="author" content="{{ site.author.name }}" />
+   {% if page.keywords %}
+   <meta name="keywords" content="{{ page.keywords }}">
+   {% endif %}
+   
+   {% if page.feed %}
+   <link rel="alternate" type="application/atom+xml" href="{{ page.feed }}" title="RSS feed" />
+   {% endif %}
    <title>{{ site.title }}</title>
    
    <!-- remove or comment this line if you want to use the local fonts -->
@@ -56,26 +63,13 @@
                <div class="row-fluid">
                   <div class="inner span7">
                      <h1>{{site.title}}</h1>
-                     <h2>Metro style web framework</h2>
-                     <p>Simple and flexible HTML, CSS, and Javascript for web apps that wants to use the "Windows 8 App Store" style, without the need to run on Windows 8.</p>
+                     <h3>Adventurer, Foodie, Programmer, Photographer</h3>
+                     {{content}}
                   </div>
                   <div class="span5">
                      <!--<img id="hero-image" class="pull-right" width="500" height="265" src="content/img/hero4.png" alt="hero">-->
-                     <div id="myFlipView" class="carousel flipview slide">
-                        <div class="carousel-inner">
-                           <div class="item active">
-                              <img src="content/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
-                           </div>
-                           <div class="item">
-                              <img src="content/img/bootstrap-mdo-sfmoma-02.jpg" alt="">
-                           </div>
-                           <div class="item">
-                              <img src="content/img/bootstrap-mdo-sfmoma-03.jpg" alt="">
-                           </div>
-                        </div>
-                        <a class="left carousel-control" href="#myFlipView" data-slide="prev">&#xe0f4;</a>
-                        <a class="right carousel-control" href="#myFlipView" data-slide="next">&#xe0f1;</a>
-                     </div>
+                     <img class="pull right" title="Pradeep Nayak" src="/images/profile.jpg" alt="Pradeeps picture" width="300px">
+                 
                   </div>
                </div>
             </div>

@@ -11,8 +11,5 @@ I did my computer science and engineering from [PES Institute of Technology](htt
 I would be writing about programming, hacking, travel, philosphy, ...... pretty much everything I feel like writing. You can read them in my [blog](/blog). 
 
 <ul class="ca-menu">
-<li><a class="social" href="http://twitter.com/prdpnayak" target="_blank">t</a></li>
-<li><a class ="social" href="http://facebook.com/pradeepnayak" target="_blank">F</a></li>
-<li><a class="social" href="http://feeds.feedburner.com/pradeepnayak" target="_blank">r</a></li>
-<li><a class="social" href="mailto:pradeep@pradeepnayak.in" target="_blank" >4</a></li>
-</ul>
+<li><a class="social" href="http://twitter.com/prdpnayak" target="_blank"><i aria-hidden="true" class="icon-twitter"></i></a></li>
+<li><a class ="social" href="http://facebook.com/pradeepnayak" target="_blank"><i aria-hidden="true" class="icon-facebook-2"></i></a></li>
