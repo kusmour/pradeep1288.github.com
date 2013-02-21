@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<title>FindTheRating</title>
+<head>
+   <link href="bootstrap.min.css" rel="stylesheet">
+   <script src ="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+   <script src="bootstrap.min.js"></script>
+   <script type="text/javascript">
+         google.load("visualization", "1", {packages:["corechart"]});
+
+          var amazon_data = "";
+          var cnet_data = "";
+          var amazon_chart_data = [["", 0],["1star", ],["2star", ],["3star", ],["4star",], ["5star", ]];
+          var cnet_chart_data = [["", 0],["1star", ],["2star", ],["3star", ],["4star", ], ["5star", ]];
+
+
+   $(document).ready(
+        function() {
+            $('#results').hide();
+        }      
+    );
+   
+  
+   function drawChart(review_site, data)
+   {
+        var i = 0;
+        if (review_site == "amazon")
+        {
+            for(i=0;i<5;i++)
+            {
+                amazon_chart_data[i+1][1] = parseInt(amazon_data[i]);
+            }
+            var options = {title: 'Amazon Reviews'};
+            var chart_data = google.visualization.arrayToDataTable(amazon_chart_data);
+            var chart = new google.visualization.PieChart(document.getElementById('amazon_chart_div'));
+            chart.draw(chart_data, options);
+        }
+        if (review_site == "cnet")
+        {
+            for(i=0;i<5;i++)
+            {
+                cnet_chart_data[i+1][1] = parseInt(cnet_data[i]);
+                console.log(cnet_chart_data);
+            }
+            var options = {title: 'CNET Reviews'};
+            var chart_data = google.visualization.arrayToDataTable(cnet_chart_data);
+            var chart = new google.visualization.PieChart(document.getElementById('cnet_chart_div'));
+            chart.draw(chart_data, options);
+        }
+        
+      }
+   
+   function getmyJSON(review_site, product)
+   {
+       $.ajax({
+        url: review_site+'.json',
+        async: false,
+        dataType: 'json',
+        success: function(data) {
+            $.each(data, function(key, val) {
+                if (product == key && review_site == "amazon")
+                    amazon_data = val;
+                if (product == key && review_site == "cnet")
+                    cnet_data = val;
+            });
+        }
+        });  
+   }
+   
+   function validate () {
+        var searchText = document.getElementById('title').value;
+        if (!searchText)
+        {
+            alert("Looks like you forgot to enter the search text");
+            return false;
+        }
+        else {
+            getmyJSON("amazon",searchText);
+            getmyJSON("cnet", searchText);
+            drawChart("amazon", amazon_data);
+            drawChart("cnet", cnet_data);
+
+        }
+    }
+   </script>
+</head>
+<body>
+    <div class ="navbar navbar-inverse navbar-fixed-top">
+        <div class = "navbar-inner">
+            <div class = "container">
+                <a class ="brand" href="#">Trojan Movie Search</a>
+            </div>
+        </div>
+    </div>
+    <div id = "mainPage">
+        <div class="container">
+            <div class ="hero-unit">
+                    Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type ="text" width = "400px" name ="title" id ="title">
+                    <br/>
+                    <br/>
+                    <br/><br/>
+                    <button type="button" class="btn btn-primary" onclick="validate();">Search</button>
+            </div> 
+        </div>
+    </div>  
+    <div id="amazon_chart_div" style="width: 900px; height: 500px;"></div>
+    <div id="cnet_chart_div" style="width: 900px; height: 500px;"></div>
+
+    <div id = "results">
+        <div class = "container">
+        <br/><br/>
+        <h3>Results:</h3>
+        <table class="table table-bordered" align ="center" id ="resultsTable">
+        
+        </table>
+    </div>
+    </div>
+</body>
+</html>
