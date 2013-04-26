@@ -6,24 +6,24 @@ category: technology
 tags: [memcache, facebook, distributed]
 ---
 
-Most of the modern web applications these days which have a more dominant read workload, experience significant infrastructure challenges. One of the primary challenges is to improve the user response time. This in turn leads to more user engament, and more revenue via adverstisements. Facebook currently solves this problem using [memcached](https://github.com/memcached/) as a building block to build memcache, and scale it to support one of the largest social networking sites in the world.
+Most of the modern web applications these days which have a more dominant read workload, experience significant infrastructure challenges. One of the primary challenges is to improve the user response time. This in turn leads to more user engament, and more revenue via Advertisements. Facebook currently solves this problem using [memcached](https://github.com/memcached/) as a building block to build *memcache*, and scale it to support one of the largest social networking sites in the world.
 
 
-This blogpost is a summary of the paper which Facebook presented at the [NSDI](https://www.usenix.org/conference/nsdi13/scaling-memcache-facebook) conference this April, 2013. I read this paper as part of my CS599 (NoSql & New SQL Database management systems) course here at USC.
+This blogpost is a summary of the paper which Facebook presented at the [NSDI](https://www.usenix.org/conference/nsdi13/scaling-memcache-facebook) conference this April, 2013. I read this paper as part of my CS599 (NoSql & New SQL Database management systems) course here at [USC](http://www.usc.edu).
 
 
 The two major design goals which Facebook considered were:
 
 * Any change must impact a userfacing or operational issue. Optimizations that have limited scope are rarely considered. 
 
-* The probability of having stale data in the system is a parameter to be tuend, however its okay to have it as long as we insulate the backend storage from excessive load.
+* The probability of having stale data in the system is a parameter to be tuned, however its okay to have it as long as we insulate the backend storage from excessive load.
 
-One of the primary challenges of scaling thousands of servers in a cluster is to reduce the **latency** (time taken to fetch the cache data) and **load** (cost of a cache miss).
+One of the primary challenges of scaling thousands of servers in a cluster is to reduce the **latency** (time taken to fetch the cached data) and **load** (cost of a cache miss).
 
 <br/>
 Reducing Latency
 ----------------
-Facebook tries to solve this by implementing the following techniques:
+Facebook tries to solve the latency problem by implementing the following techniques:
 
 * *Parallel requests and batching*
 * *Optimizing client server communication*
@@ -66,17 +66,17 @@ Facebook tries to optimize the frequency of fetching data from the backend datab
 
 
 
-This mechanism is introduced to solve two problems i.e. *stale sets* and *thundering herds*. *Stale sets* when a web server sets a value in memcache and it does not reflect the latest value in the database. *Thundering herd* occurs when a specific key undergoes a lot of read & write activity.
+This mechanism is introduced to solve two problems i.e. *stale sets* and *thundering herds*. *Stale sets* occur when a web server sets a value in memcache and it does not reflect the latest value in the database. *Thundering herd* occurs when a specific key undergoes a lot of read & write activity.
 
-Stale sets are avoided by issuing a short lived 64 bit lease token which are bound the keys which clients originally requested. These clients then provide the lease token while setting the value in the cache and making use of this the memcached instances can determine whether the data should be stored or not. 
+Stale sets are avoided by issuing a short lived 64 bit lease token which are bound to the keys which clients originally requested. These clients then provide the lease token while setting the value in the cache and making use of this the memcached instances can determine whether the data should be stored or not. 
 
 
-The thundering herd issue is solved by limiting the rate at which the lease tokens are issued and there by signalling other clients to wait for a while before they request for the key' value.
+The thundering herd issue is solved by limiting the rate at which the lease tokens are issued and there by signalling other clients to wait for a while before they request for the key's value.
 
 
 **Memcache pools**
 
-The *memcached* servers in a cluster are partitioned into separate pools based on key accesses. For example a pool is dedicated for keys which are accessed frequently for which the cache misses are considered inexpensive. A large pool for keys are which are accessed very frequently and cache misses are considered expensive. Facebook also maintains a default pool called as *wildcard* for keys which donot fall into any category.
+The *memcached* servers in a cluster are partitioned into separate pools based on key accesses. For example a pool is dedicated for keys which are accessed frequently for which the cache misses are considered inexpensive. A large pool is dedicated for keys are which are accessed very frequently and cache misses are considered expensive. Facebook also maintains a default pool called as *wildcard* for keys which donot fall into any category.
 
 
 
@@ -93,17 +93,17 @@ In order to improve efficieny & latency replication is done within pools. Facebo
 Handling Failures
 -----------------
 
-It could so happen that a few of the memcached servers could fail and the reasons could be many. This inturn increases the load on the backend databases and this is not desired. Facebook addresses two kinds of failures:
+It could so happen that a few of the memcached servers could fail and reasons could be many. This inturn increases the load on the backend databases which is not desirable. Facebook addresses two kinds of failures:
 
 * A small number of servers are not accessible due to network or server failure.
 * A widespread outage where significant number of servers in the cluster are affected.
 
-For small outages, facebook maintains a small number of servers in a cluster called *Gutters*. Approximately 1% of servers in a cluster are reserved as Gutters.
+For small outages, facebook maintains a small number of servers in a cluster called *Gutters*. Approximately 1% of servers in a cluster are reserved as Gutters. These Gutters take over the responsilbily of failed servers.
 
 For large outages if the entire cluster has to be taken offline, they re-direct the web requests to other clusters.
 
 
-Facebook also talk about partitioning the clusters based on Regions. This section of the paper includes discussion on *Regional Invalidations*, *Having Regional Pools*, *Maintaining consistency across different regions*. I am not very clear with what was being explained in this section of the paper and hence I am not able to give a clear summary about this section. However my friend Abinesh here at USC, has also summarized this paper and you can refer to his blog [here](http://abineshtd.blogspot.com/2013/04/notes-on-scaling-memcache-at-facebook.html) for the summary of this section.
+Facebook also talk about partitioning the clusters based on Regions. This section of the paper includes discussion on *Regional Invalidations*, *Having Regional Pools*, *Maintaining consistency across different regions*. I am not very clear with what was being explained in this section of the paper and hence I would not be describing it here. However my friend [Abinesh](http://twitter.com/abineshtd) here at USC, has also summarized this paper and you can refer to his blog [here](http://abineshtd.blogspot.com/2013/04/notes-on-scaling-memcache-at-facebook.html) for information on this section.
 
 
 Single Server Improvements
