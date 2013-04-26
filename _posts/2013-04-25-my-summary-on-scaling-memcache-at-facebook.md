@@ -104,7 +104,7 @@ For large outages if the entire cluster has to be taken offline, they re-direct 
 
 
 Facebook also talk about partitioning the clusters based on Regions. This section of the paper includes discussion on *Regional Invalidations*, *Having Regional Pools*, *Maintaining consistency across different regions*. I am not very clear with what was being explained in this section of the paper and hence I would not be describing it here. However my friend [Abinesh](http://twitter.com/abineshtd) here at USC, has also summarized this paper and you can refer to his blog [here](http://abineshtd.blogspot.com/2013/04/notes-on-scaling-memcache-at-facebook.html) for information on this section.
-
+<br/>
 
 Single Server Improvements
 --------------------------
@@ -137,7 +137,7 @@ Facebook solves this by storing such keys in a circular buffer of linked lists c
 Software upgrades usually mean clearing out whole cache and repopulating them again. However this is not desirable. Facebook uses System V's shared memory regions, so that data can remain live across software upgrades of these servers.
 
 
-
+<br/>
 Learnings from this paper
 -------------------------
 
