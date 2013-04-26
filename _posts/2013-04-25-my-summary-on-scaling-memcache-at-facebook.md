@@ -18,8 +18,6 @@ The two major design goals which Facebook considered were:
 
 * The probability of having stale data in the system is a parameter to be tuend, however its okay to have it as long as we insulate the backend storage from excessive load.
 
-<img src="http://pradeepnayak.in/images/fb_arch.jpg">
-
 One of the primary challenges of scaling thousands of servers in a cluster is to reduce the **latency** (time taken to fetch the cache data) and **load** (cost of a cache miss).
 
 <br/>
