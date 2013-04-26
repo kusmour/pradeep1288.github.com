@@ -140,11 +140,16 @@ Software upgrades usually mean clearing out whole cache and repopulating them ag
 
 Learnings from this paper
 -------------------------
+
+
+
+
+
 * Keep things simple.
 * I have gained knowledge about memcached internals in depth.
 * It's okay to have stale data to a certain extent at the cost of insulating the backend database server.
 * Separating caching layer from the backend database simplifies scaling.
 
-
+<br/>
 I hope facebook open sources their build of memcached someday. And finally a shout out to my [Prof Shahram](http://perspolis.usc.edu/Users/shahram/), my instructor for CS599 course for having this paper as part of curriculum and [Abinesh](http://twitter.com/abineshtd) for his inputs and taking time to review this post.
 
