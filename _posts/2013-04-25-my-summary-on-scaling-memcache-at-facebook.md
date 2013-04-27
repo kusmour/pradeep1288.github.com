@@ -38,7 +38,7 @@ The web application code is analyzed to minimize the number of network round tri
 
 
 
-*Memcached* servers donot communicate with each other. When appropriate, they  embed the complexity of the system into a stateless client rather than in the *memcached* servers.
+*Memcached* servers do not communicate with each other. When appropriate, they  embed the complexity of the system into a stateless client rather than in the *memcached* servers.
 
 Client logic is provided as two components: a library that can be embedded into applications or as a standalone proxy named *mcrouter*. This proxy presents a memcached server interface and routes the requests/replies to/from other servers.
 
@@ -76,13 +76,13 @@ The thundering herd issue is solved by limiting the rate at which the lease toke
 
 **Memcache pools**
 
-The *memcached* servers in a cluster are partitioned into separate pools based on key accesses. For example a pool is dedicated for keys which are accessed frequently for which the cache misses are considered inexpensive. A large pool is dedicated for keys are which are accessed very frequently and cache misses are considered expensive. Facebook also maintains a default pool called as *wildcard* for keys which donot fall into any category.
+The *memcached* servers in a cluster are partitioned into separate pools based on key accesses. For example a pool is dedicated for keys which are accessed frequently for which the cache misses are considered inexpensive. A large pool is dedicated for keys are which are accessed very frequently and cache misses are considered expensive. Facebook also maintains a default pool called as *wildcard* for keys which do not fall into any category.
 
 
 
 **Replication within Pools**
 
-In order to improve efficieny & latency replication is done within pools. Facebook does replication if :
+In order to improve efficieny & latency, replication is done within pools. Facebook does replication if :
 
 * when application fetches many keys from the same pool
 * if the entire dataset fits into one or two memcached servers
@@ -109,7 +109,7 @@ Facebook also talk about partitioning the clusters based on Regions. This sectio
 Single Server Improvements
 --------------------------
 
-**Performane Optimizations**
+**Performance Optimizations**
 
 * Allow automatic expansion of the hash table, to avoid lookup times from drifting to *O(n)*
 * Making the server multithreaded and using a global lock to protect multiple data structures.
