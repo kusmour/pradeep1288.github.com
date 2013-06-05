@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 ---
 <ul>
   {% for post in site.posts %}

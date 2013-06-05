@@ -14,12 +14,19 @@
   </address>
   
   <div class="prev-next">
-  {% if page.next %}
-    <a href="{{ page.next.url }}" class="next" title="{{ page.next.title }}">Next Post &rarr;</a>
-  {% endif %}
+  <ul class="pager">
+        <li>
   {% if page.previous %}
     <a href="{{ page.previous.url }}" class="prev" title="{{ page.previous.title }}">&larr; Earlier Post</a>
   {% endif %}
+    </li>
+    <li>
+  {% if page.next %}
+    <a href="{{ page.next.url }}" class="next" title="{{ page.next.title }}">Next Post &rarr;</a>
+  {% endif %}
+    </li>
+
+  </ul>
   </div>
   {% if site.enable_tweet_button %}
     {% include helpers/tweet-button.html %}
