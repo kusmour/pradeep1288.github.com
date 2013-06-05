@@ -4,16 +4,11 @@
   {% assign tags_list = page.tags %}
   {% include helpers/tags_list.html %}
   </ul>
-
   {{ content }}
 
-  <address class="signature">
-    <a class="author" href="/">{{ site.author.name }}</a> 
-    <span class="date">{{ page.date | date_to_long_string }}</span>
-    <span class="location">{{ page.location }}</span>
-  </address>
+ 
   
-  <div class="prev-next">
+ <div class="prev-next">
   <ul class="pager">
         <li>
   {% if page.previous %}
@@ -28,6 +23,10 @@
 
   </ul>
   </div>
+  <address class="signature">
+    <span class="date">Published on {{ page.date | date_to_long_string }}</span>
+    <span class="location">{{ page.location }}</span>
+  </address>
   {% if site.enable_tweet_button %}
     {% include helpers/tweet-button.html %}
   {% endif %}
