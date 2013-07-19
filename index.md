@@ -6,4 +6,4 @@ header: This is Pradeep's Website
 
 Pradeep Nayak
 -------------
-Pradeep is yet another smart computer science engineer. He is very active on twitter as [@prdpnayak](http://twitter.com/prdpnayak) and also on [facebook](http://facebook.com/pradeepnayak). He is a Mac and Linux junkie. He is also a hobby photographer and clicks cool pictures with his Canon 500D. You can find those pictures [here](/photos). He has a bucket list too and you read them [here](/bucket.html).
+Pradeep nayak is not just another Computer Engineer. Quite the opposite of the quintessential geek, Pradeep enjoys adventure sports and is up for trying anything that challenges him mentally and physically. With an unhealthy love for Linux and Mac, if he isn't in front of his computer baking code or out climbing some peak, he is in front of the computer editing his pictures that he clicks on his Canon 500D while up on some peak. 
