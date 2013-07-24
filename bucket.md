@@ -5,7 +5,7 @@ header: These are the things which I need to do before I die
 ---
 I have a lot in mind, however these are few things which I would like to accomplish.
 
-* Skydiving
+* <del> Skydiving </del>
 * Learn to fly a plane
 * Visit New Zeland
 * Do Skiing 
