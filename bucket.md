@@ -5,7 +5,7 @@ header: These are the things which I need to do before I die
 ---
 I have a lot in mind, however these are few things which I would like to accomplish.
 
-* <del> Skydiving </del>
+* [<del> Skydiving </del>](pradeepnayak.in/personal/2013/07/30/jumping-out-of-an-airplane/)
 * Learn to fly a plane
 * Visit New Zeland
 * Do Skiing 
