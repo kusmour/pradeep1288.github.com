@@ -17,7 +17,7 @@ I have a lot in mind, however these are few things which I would like to accompl
 * Ladakh Bike Trip
 * Masai Mara National Reserve Safari
 * [<del>New Year's Eve in Times Square</del>](http://pradeepnayak.in/travel/2013/01/05/new-years-in-times-square/)
-* Drive a sports car
+* <del>Drive a sports car</del>
 * Drive a sports bike
 * Travel in a cruise ship
 * Learn to speak a foreign language
