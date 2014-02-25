@@ -1,29 +1,63 @@
-# This is the default format. 
-# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /:categories/:year/:month/:day/:title 
-pygments: true
-var:
-  about_path: /about
-  blog_path: /blog
-  photos_path: /photos
-  archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
-  search_path : /search.html
-  bucket_list: /bucket.html
+title:            Pradeep Nayak
+tagline:          Life is a sport. Make it count
+description:      My experiences in general.
+# Your site's domain goes here. Leave localhost server or blank when working locally.
+url:              http://localhost:4000
 
-markdown: redcarpet
-enable_tweet_button: true  
-searchindex: yes
-production_url : http://pradeepnayak.in # or your custom domain name
-title : Pradeep Nayak
+# Owner/author information
+owner:
+  name:           Pradeep Nayak
+  avatar:         bio-photo.jpg
+  bio:            "Adventurer, Foodie, Traveller, Photographer"
+  email:          pradeep1288@gmail.com
+  disqus_shortname:     pradeepnayak
+  # Social networking links are used in author-bio sidebar. Update and remove as you like.
+  twitter: _prdp        
+  facebook: pradeepnayak      
+  github: pradeep1288        
+  linkedin:       
+  instagram:      
+  lastfm:         
+  tumblr:         
+  # For Google Authorship https://plus.google.com/authorship
+  google_plus:    
 
-author :
-  name : Pradeep Nayak
-  email : pradeep1288@gmail.com
-  github : pradeep1288
-  disqus_shortname: pradeepnayak
-  twitter : prdpnayak
+# Analytics and webmaster tools stuff goes here
+google_analytics:   
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:        
 
-leftCurleys: "{{"
-rightCurleys: "}}"
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: Blog
+    url: /blog/
+  - title: Archive
+    url: /archive.html
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      true
+pygments:    true
+markdown:    kramdown
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  use_coderay: false
+
+  coderay:
+    coderay_line_numbers: 
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: class
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
