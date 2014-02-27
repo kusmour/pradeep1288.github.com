@@ -2,7 +2,8 @@ title:            Pradeep Nayak
 tagline:          Life is a sport. Make it count
 description:      My experiences in general.
 # Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://pradeepnayak.in
+url:              http://localhost:4000
+#url:              http://pradeepnayak.in
 
 # Owner/author information
 owner:
