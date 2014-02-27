@@ -8,7 +8,7 @@ I have a lot in mind, however these are few things which I would like to accompl
 * [<del> Skydiving </del>](pradeepnayak.in/personal/2013/07/30/jumping-out-of-an-airplane/)
 * Learn to fly a plane
 * Visit New Zeland
-* Do Skiing 
+* <del>Do Skiing</del>
 * Watch a formula 1 race
 * Watch an EPL match
 * Watch an international football match
@@ -23,7 +23,7 @@ I have a lot in mind, however these are few things which I would like to accompl
 * Learn to speak a foreign language
 * Hot Air Baloon Ride
 * Set foot in all five oceans of the world
-* Swim like a Dolphin - FlyBoarding
+* <del>Swim like a Dolphin - FlyBoarding</del>
 * Visit Alaska
 * Visit Hawaii
 * Cuisines of the world - Explore different cuisines from different parts of the world
