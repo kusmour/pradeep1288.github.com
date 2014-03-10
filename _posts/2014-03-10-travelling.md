@@ -183,9 +183,31 @@ pictures which I clicked while I travelled.
 
 <br/>
 
-### Spent some awesome time with best buddies in Gokarna.
+###Spent some awesome time with best buddies in Gokarna.
 
 <figure class="third">
 <img src="/images/travel_story/36.jpg">
 <img src="/images/travel_story/37.jpg">
 </figure>
+
+<br/>
+
+###Partied in Goa
+
+<figure class="third">
+<img src="/images/travel_story/38.jpg">
+<img src="/images/travel_story/39.jpg">
+<img src="/images/travel_story/40.jpg">
+</figure>
+
+<br/>
+
+###Drove to Big Sur via Highway 1
+
+<figure class="third">
+<img src="/images/travel_story/41.jpg">
+<img src="/images/travel_story/42.jpg">
+<img src="/images/travel_story/43.jpg">
+</figure>
+
+<br/>
