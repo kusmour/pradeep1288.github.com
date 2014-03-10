@@ -127,3 +127,23 @@ pictures which I clicked while I travelled.
 </figure>
 
 <br/>
+
+###Said Hello to my friends in Seattle
+
+<figure>
+<img src="/images/travel_story/24.jpg">
+</figure>
+
+<br/>
+
+###and went around Seattle.
+
+<figure class="third">
+<img src="/images/travel_story/25.jpg">
+<img src="/images/travel_story/26.jpg">
+<img src="/images/travel_story/27.jpg">
+</figure>
+
+<br/>
+
+###
