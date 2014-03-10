@@ -146,4 +146,16 @@ pictures which I clicked while I travelled.
 
 <br/>
 
-###
+###Camped for the first time ever at Yosemite
+
+<figure>
+<img src="/images/travel_story/28.jpg">
+</figure>
+
+<br/>
+
+###and went hiking, got this crazy picture.
+
+<figure>
+<img src="/images/travel_story/29.jpg">
+</figure>
