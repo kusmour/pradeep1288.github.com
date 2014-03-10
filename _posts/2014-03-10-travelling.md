@@ -1,0 +1,73 @@
+---
+layout: post
+title: "Travelling, the last 18 months"
+comments: true
+category: travel
+tags: [travel]
+---
+
+I came to the US for pursuing my masters in Computer Science. I came here in
+August 2012. Since then, while I was not studying and working on my assignments
+I travelled. I am writing this post because I want to tell a story and
+will do so using the pictures which I clicked while I travelled.
+
+<br/>
+
+###I live in Los Angeles. I went and saw the Hollywood sign up-close.
+
+<figure>
+  <img src="/images/travel_story/1.jpg">
+</figure>
+
+<br/>
+
+###I then did my first ever road trip to San Diego.
+
+<figure>
+  <img src="/images/travel_story/2.jpg">
+  <figcaption> Sea Kayaking at La Jolla </figcaption>
+</figure>
+
+<br/>
+
+###I visited New York City, and fell in love with the city
+
+<figure class="half">
+  <img src="/images/travel_story/3.jpg">
+  <img src="/images/travel_story/4.jpg">
+</figure>
+
+<br/>
+
+###and celebrated New Year 2013 in Times Square.
+
+<figure>
+  <img src="/images/travel_story/5.jpg">
+</figure>
+
+<br/>
+
+###Then, I partied, gambled and had loads of fun in Las Vegas.
+
+<figure class="third">
+<img src="/images/travel_story/6.jpg">
+<img src="/images/travel_story/7.jpg">
+<img src="/images/travel_story/8.jpg">
+</figure>
+
+<br/>
+
+###I then did my longest ever Roadtrip. I drove to Portland
+
+<figure>
+<img src="/images/travel_story/9.jpg">
+</figure>
+
+<br/>
+
+###and was mesmerised by some amazing greenery
+
+<figure class="half">
+  <img src="/images/travel_story/10.jpg">
+  <img src="/images/travel_story/11.jpg">
+</figure>
