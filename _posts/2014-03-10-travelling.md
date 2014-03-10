@@ -179,7 +179,13 @@ pictures which I clicked while I travelled.
 <img src="/images/travel_story/33.jpg">
 <img src="/images/travel_story/34.jpg">
 <img src="/images/travel_story/35.jpg">
-<figcaption>US Open 2013</figcaption>  
 </figure>
 
 <br/>
+
+### Spent some awesome time with best buddies in Gokarna.
+
+<figure class="third">
+<img src="/images/travel_story/36.jpg">
+<img src="/images/travel_story/37.jpg">
+</figure>
