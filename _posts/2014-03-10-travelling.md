@@ -6,10 +6,10 @@ category: travel
 tags: [travel]
 ---
 
-I came to the US for pursuing my masters in Computer Science. I came here in
-August 2012. Since then, while I was not studying and working on my assignments
-I travelled. I am writing this post because I want to tell a story and
-will do so using the pictures which I clicked while I travelled.
+I came to the US in August 2012 for pursuing my masters in Computer Science at
+USC. Since then, when not studying and working on my assignments I travelled.
+I am writing this post because I want to tell a story and will do so using the
+pictures which I clicked while I travelled.
 
 <br/>
 
