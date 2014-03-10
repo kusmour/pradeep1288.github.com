@@ -109,3 +109,9 @@ pictures which I clicked while I travelled.
 </figure>
 
 <br/>
+
+###Beeing a huge fan of Steve Jobs, paid a visit to One Infinite Loop
+
+<figure>
+<img src="/images/travel_story/20.jpg">
+</figure>
