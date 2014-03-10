@@ -211,3 +211,30 @@ pictures which I clicked while I travelled.
 </figure>
 
 <br/>
+
+###Apart from travelling, I have hiked a lot of peaks
+
+<figure class="third">
+<img src="/images/travel_story/44.jpg">
+<img src="/images/travel_story/45.jpg">
+<img src="/images/travel_story/46.jpg">
+</figure>
+
+<br/>
+
+###and more peaks.
+
+<figure class="half">
+<img src="/images/travel_story/47.jpg">
+<img src="/images/travel_story/48.jpg">
+</figure>
+
+<br/>
+
+###Skydiving, Flyboarding and Skiing.
+
+<figure class="third">
+<img src="/images/travel_story/49.jpg">
+<img src="/images/travel_story/50.jpg">
+<img src="/images/travel_story/51.jpg">
+</figure>
