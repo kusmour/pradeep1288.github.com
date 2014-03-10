@@ -238,3 +238,18 @@ pictures which I clicked while I travelled.
 <img src="/images/travel_story/50.jpg">
 <img src="/images/travel_story/51.jpg">
 </figure>
+
+<br/>
+
+##What I gained out of travelling ?
+
+* Met amazing people, and made friends.
+* Got a chance to explore different food cuisines.
+* Completed some items on my [bucket](/bucket.html) list.
+* Experience different cultures.
+* Learned to be more patient
+* Learned to love life and make the best out of it.
+
+and there are many more reasons. It keeps me ticking.
+
+>If you’re twenty-two, physically fit, hungry to learn and be better, I urge you to travel – as far and as widely as possible. Sleep on floors if you have to. Find out how other people live and eat and cook. Learn from them – wherever you go. ~ Anthony Bourdain
