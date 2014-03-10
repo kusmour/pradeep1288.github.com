@@ -99,3 +99,13 @@ pictures which I clicked while I travelled.
 <img src="/images/travel_story/17.jpg">
 <img src="/images/travel_story/18.jpg">
 </figure>
+
+<br/>
+
+###Did some wine tasting in Napa Valley.
+
+<figure>
+<img src="/images/travel_story/19.jpg">
+</figure>
+
+<br/>
