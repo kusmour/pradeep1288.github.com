@@ -13,7 +13,7 @@ will do so using the pictures which I clicked while I travelled.
 
 <br/>
 
-###I live in Los Angeles. I went and saw the Hollywood sign up-close.
+###I live in Los Angeles. So went and saw the Hollywood sign up-close.
 
 <figure>
   <img src="/images/travel_story/1.jpg">
@@ -79,4 +79,23 @@ will do so using the pictures which I clicked while I travelled.
 <figure class="half">
   <img src="/images/travel_story/12.jpg">
   <img src="/images/travel_story/13.jpg">
+</figure>
+
+<br/>
+
+###Visited San Fransisco
+
+<figure class="half">
+  <img src="/images/travel_story/14.jpg">
+  <img src="/images/travel_story/15.jpg">
+</figure>
+
+<br/>
+
+###and fell in love with the city.
+
+<figure class="third">
+<img src="/images/travel_story/16.jpg">
+<img src="/images/travel_story/17.jpg">
+<img src="/images/travel_story/18.jpg">
 </figure>
