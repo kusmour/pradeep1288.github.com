@@ -246,7 +246,7 @@ pictures which I clicked while I travelled.
 * Met amazing people, and made friends.
 * Got a chance to explore different food cuisines.
 * Completed some items on my [bucket](/bucket.html) list.
-* Experience different cultures.
+* Experienced different cultures.
 * Learned to be more patient
 * Learned to love life and make the best out of it.
 
