@@ -110,8 +110,20 @@ pictures which I clicked while I travelled.
 
 <br/>
 
-###Beeing a huge fan of Steve Jobs, paid a visit to One Infinite Loop
+###Beeing a huge fan of Steve Jobs, paid a visit to One Infinite Loop.
 
 <figure>
 <img src="/images/travel_story/20.jpg">
 </figure>
+
+<br/>
+
+###Spent a weekend at Lake Tahoe.
+
+<figure class="third">
+<img src="/images/travel_story/21.jpg">
+<img src="/images/travel_story/22.jpg">
+<img src="/images/travel_story/23.jpg">
+</figure>
+
+<br/>
