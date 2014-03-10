@@ -170,3 +170,16 @@ pictures which I clicked while I travelled.
 <img src="/images/travel_story/32.jpg">
 <figcaption>US Open 2013</figcaption>  
 </figure>
+
+<br/>
+
+###Had a stop over at Hong Kong. Went out and explored.
+
+<figure class="third">
+<img src="/images/travel_story/33.jpg">
+<img src="/images/travel_story/34.jpg">
+<img src="/images/travel_story/35.jpg">
+<figcaption>US Open 2013</figcaption>  
+</figure>
+
+<br/>
