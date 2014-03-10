@@ -159,3 +159,14 @@ pictures which I clicked while I travelled.
 <figure>
 <img src="/images/travel_story/29.jpg">
 </figure>
+
+<br/>
+
+###Travelled to New York again to watch Federer play.
+
+<figure class="third">
+<img src="/images/travel_story/30.jpg">
+<img src="/images/travel_story/31.jpg">
+<img src="/images/travel_story/32.jpg">
+<figcaption>US Open 2013</figcaption>  
+</figure>
