@@ -8,7 +8,7 @@ tags: [travel]
 
 I came to the US in August 2012 for pursuing my masters in Computer Science at
 USC. Since then, when not studying and working on my assignments I travelled.
-I am writing this post because I want to tell a story and will do so using the
+I am writing this post because I want to tell a story and will do so using
 pictures which I clicked while I travelled.
 
 <br/>
@@ -250,6 +250,6 @@ pictures which I clicked while I travelled.
 * Learned to be more patient
 * Learned to love life and make the best out of it.
 
-and there are many more reasons. It keeps me ticking.
+and there are many more reasons. It just keeps me ticking.
 
 >If you’re twenty-two, physically fit, hungry to learn and be better, I urge you to travel – as far and as widely as possible. Sleep on floors if you have to. Find out how other people live and eat and cook. Learn from them – wherever you go. ~ Anthony Bourdain
