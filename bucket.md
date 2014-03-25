@@ -24,7 +24,7 @@ I have a lot in mind, however these are few things which I would like to accompl
 * Hot Air Baloon Ride
 * Set foot in all five oceans of the world
 * <del>Swim like a Dolphin - FlyBoarding</del>
-* Visit Alaska
+* <del>Visit Alaska</del>
 * Visit Hawaii
 * Cuisines of the world - Explore different cuisines from different parts of the world
 * [<del>Watch Roger Federer play tennis live in person.</del>](https://www.facebook.com/photo.php?v=10153180527580398)
