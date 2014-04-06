@@ -183,6 +183,14 @@ pictures which I clicked while I travelled.
 
 <br/>
 
+###Went home after 1.5 years and got a very nice welcome
+
+<figure>
+<img src ="/images/travel_story/52.jpg">
+</figure>
+
+<br/>
+
 ###Spent some awesome time with best buddies in Gokarna.
 
 <figure class="third">
